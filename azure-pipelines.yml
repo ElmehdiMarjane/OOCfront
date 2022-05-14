@@ -17,6 +17,9 @@ steps:
     checkLatest: true
 
 - script: |
+    npm cache clean -f
+    npm install -g n
+    n stable
     npm install -g @angular/cli
     npm install
     ng build --prod
